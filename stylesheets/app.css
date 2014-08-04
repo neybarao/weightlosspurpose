@@ -1,0 +1,28 @@
+/* line 42, ../scss/app.scss */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: #1F1F1F;
+  text-align: center;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
+  color: #BCBCBC;
+}
+
+/* line 53, ../scss/app.scss */
+.logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -140px;
+  margin-top: -20px;
+}
+
+/* line 61, ../scss/app.scss */
+.message {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding-bottom: 50px;
+}
