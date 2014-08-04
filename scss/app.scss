@@ -40,27 +40,96 @@
 //   "foundation/components/visibility";
 
 html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  background: #1F1F1F;
-  text-align: center;
-  font-family: 'Source Sans Pro', sans-serif;
-  font-weight: 300;
-  color: #BCBCBC;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+body {
+	background-image: url('../images/bg-photo.jpg');
+	background-position: center center;
+	background-size: cover;
 }
 
 .logo {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-left: -140px;
-  margin-top: -20px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -130px;
+	margin-top: -36px;
+	z-index: 100;
 }
 
 .message {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  padding-bottom: 50px;
+	position: absolute;
+	bottom: 20%;
+	width: 100%;
+	z-index: 100;
+	font-size: 24px;
+	color: #AAA;
+	font-weight: 300;
+	p {
+		line-height: 0.5em;
+	}
+	strong {
+		color: white;
+		font-weight: 400;
+	}
+}
+
+.signature {
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+	font-size: 14px;
+	z-index: 100;
+	color: #AAA;
+	.fa {
+		color: #FF3B30;
+	}
+}
+
+.overlay {
+	position: fixed;
+	opacity: 0.6;
+	background-color: rgba(0,0,0,0.9);
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+}
+
+#video_background {
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	z-index: 1;
+	overflow: hidden;
+	background-image: url('../images/bg-photo.jpg');
+	background-position: center center;
+	background-size: cover;
+	z-index: 1;
+}
+
+@media (max-width:768px){
+	body, #video_backgroun {
+		background-image: url('../images/bg-photo-mobile.jpg');
+	}
+
+	.message p {
+		line-height: 1em;
+		margin: 0;
+		margin-bottom: 5px;
+	}
+
+	#video_background {
+		display: none;
+	}
 }

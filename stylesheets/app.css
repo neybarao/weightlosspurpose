@@ -3,26 +3,105 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-  background: #1F1F1F;
   text-align: center;
   font-family: 'Source Sans Pro', sans-serif;
-  font-weight: 300;
-  color: #BCBCBC;
 }
 
-/* line 53, ../scss/app.scss */
+/* line 50, ../scss/app.scss */
+body {
+  background-image: url("../images/bg-photo.jpg");
+  background-position: center center;
+  background-size: cover;
+}
+
+/* line 56, ../scss/app.scss */
 .logo {
   position: absolute;
   top: 50%;
   left: 50%;
-  margin-left: -140px;
-  margin-top: -20px;
+  margin-left: -130px;
+  margin-top: -36px;
+  z-index: 100;
 }
 
-/* line 61, ../scss/app.scss */
+/* line 65, ../scss/app.scss */
 .message {
   position: absolute;
-  bottom: 0;
+  bottom: 20%;
   width: 100%;
-  padding-bottom: 50px;
+  z-index: 100;
+  font-size: 24px;
+  color: #AAA;
+  font-weight: 300;
+}
+/* line 73, ../scss/app.scss */
+.message p {
+  line-height: 0.5em;
+}
+/* line 76, ../scss/app.scss */
+.message strong {
+  color: white;
+  font-weight: 400;
+}
+
+/* line 82, ../scss/app.scss */
+.signature {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-size: 14px;
+  z-index: 100;
+  color: #AAA;
+}
+/* line 89, ../scss/app.scss */
+.signature .fa {
+  color: #FF3B30;
+}
+
+/* line 94, ../scss/app.scss */
+.overlay {
+  position: fixed;
+  opacity: 0.6;
+  background-color: rgba(0, 0, 0, 0.9);
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+
+/* line 105, ../scss/app.scss */
+#video_background {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 1;
+  overflow: hidden;
+  background-image: url("../images/bg-photo.jpg");
+  background-position: center center;
+  background-size: cover;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  /* line 122, ../scss/app.scss */
+  body, #video_backgroun {
+    background-image: url("../images/bg-photo-mobile.jpg");
+  }
+
+  /* line 126, ../scss/app.scss */
+  .message p {
+    line-height: 1em;
+    margin: 0;
+    margin-bottom: 5px;
+  }
+
+  /* line 132, ../scss/app.scss */
+  #video_background {
+    display: none;
+  }
 }
